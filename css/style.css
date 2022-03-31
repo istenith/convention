@@ -583,16 +583,21 @@ button {
      text-transform: uppercase;
      font-size: 20px;
      line-height: 20px;
-     font-weight: 400;
+     font-weight: bold;
      padding: 0;
+     width:80%;
+     margin: auto;
+     text-align: center;
 }
 
 .Testimonial_box p {
      color: #fff;
      font-size: 17px;
      line-height: 28px;
-     padding: 25px 0;
-     padding-right: 200px;
+     width:80%;
+     margin: auto;
+     padding: 10px 70px 70px 70px;
+     text-align: center;
 }
 
 

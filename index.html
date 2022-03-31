@@ -1,277 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>diigo</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Convention-ISTE</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link
+      href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
+      rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <link rel="icon" href="images/logo.png">
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   <!-- body -->
-   <body class="main-layout">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div>
-      <!-- end loader -->
-      <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div  class="head_top">
-            <div class="header">
-               <div class="container-fluid">
-                  <div class="row">
-                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                           <div class="center-desk">
-                              <div class="logo">
-                                 <a href="index.html"><img src="images/logo.png" alt="#" /></a>
-                              </div>
+</head>
+<style>
+   .timeline {
+      position: relative;
+      width: 660px;
+      margin: 0 auto;
+      margin-top: 80px;
+      padding: 1em 0;
+      list-style-type: none;
+      transform: scale(1.4);
+   }
+
+   .timeline:before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 100%;
+      margin-left: -3px;
+      background: rgb(80, 80, 80);
+      background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+      background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+      background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+      background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+      background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+
+      z-index: 5;
+   }
+
+   .timeline li {
+      padding: 1em 0;
+   }
+
+   .timeline li:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+   }
+
+   .direction-l {
+      position: relative;
+      width: 300px;
+      float: left;
+      text-align: right;
+   }
+
+   .direction-r {
+      position: relative;
+      width: 300px;
+      float: right;
+   }
+
+   .flag-wrapper {
+      position: relative;
+      display: inline-block;
+
+      text-align: center;
+   }
+
+   .flag {
+      position: relative;
+      display: inline;
+      background: rgb(248, 248, 248);
+      padding: 6px 10px;
+      border-radius: 5px;
+
+      font-weight: 600;
+      text-align: left;
+   }
+
+   .direction-l .flag {
+      -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+      box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+   }
+
+   .direction-r .flag {
+      -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+   }
+
+   .direction-l .flag:before,
+   .direction-r .flag:before {
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      content: ' ';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-top: -10px;
+      background: #fff;
+      border-radius: 10px;
+      border: 4px solid #008df3;
+      z-index: 10;
+   }
+
+   .direction-r .flag:before {
+      left: -40px;
+   }
+
+   .direction-l .flag:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      height: 0;
+      width: 0;
+      margin-top: -8px;
+      border: solid transparent;
+      border-left-color: rgb(248, 248, 248);
+      border-width: 8px;
+      pointer-events: none;
+   }
+
+   .direction-r .flag:after {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      height: 0;
+      width: 0;
+      margin-top: -8px;
+      border: solid transparent;
+      border-right-color: rgb(248, 248, 248);
+      border-width: 8px;
+      pointer-events: none;
+   }
+
+   .time-wrapper {
+      display: inline;
+
+      line-height: 1em;
+      font-size: 0.66666em;
+      color: #008df3;
+      vertical-align: middle;
+   }
+
+   .direction-l .time-wrapper {
+      float: left;
+   }
+
+   .direction-r .time-wrapper {
+      float: right;
+   }
+
+   .time {
+      display: inline-block;
+      padding: 4px 6px;
+      background: rgb(248, 248, 248);
+   }
+
+   .desc {
+      margin: 1em 0.75em 0 0;
+
+      font-size: 0.77777em;
+      font-style: italic;
+      line-height: 1.5em;
+   }
+
+   .direction-r .desc {
+      margin: 1em 0 0 0.75em;
+   }
+
+   /* ================ Timeline Media Queries ================ */
+
+   @media screen and (max-width: 660px) {
+
+      .timeline {
+         width: 100%;
+         padding: 4em 0 1em 0;
+      }
+
+      .timeline li {
+         padding: 2em 0;
+      }
+
+      .direction-l,
+      .direction-r {
+         float: none;
+         width: 100%;
+
+         text-align: center;
+      }
+
+      .flag-wrapper {
+         text-align: center;
+      }
+
+      .flag {
+         background: rgb(255, 255, 255);
+         z-index: 15;
+      }
+
+      .direction-l .flag:before,
+      .direction-r .flag:before {
+         position: absolute;
+         top: -30px;
+         left: 50%;
+         content: ' ';
+         display: block;
+         width: 12px;
+         height: 12px;
+         margin-left: -9px;
+         background: #fff;
+         border-radius: 10px;
+         border: 4px solid rgb(255, 80, 80);
+         z-index: 10;
+      }
+
+      .direction-l .flag:after,
+      .direction-r .flag:after {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: -8px;
+         height: 0;
+         width: 0;
+         margin-left: -8px;
+         border: solid transparent;
+         border-bottom-color: rgb(255, 255, 255);
+         border-width: 8px;
+         pointer-events: none;
+      }
+
+      .time-wrapper {
+         display: block;
+         position: relative;
+         margin: 4px 0 0 0;
+         z-index: 14;
+      }
+
+      .direction-l .time-wrapper {
+         float: none;
+      }
+
+      .direction-r .time-wrapper {
+         float: none;
+      }
+
+      .desc {
+         position: relative;
+         margin: 1em 0 0 0;
+         padding: 1em;
+         background: rgb(245, 245, 245);
+         -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+         -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+         box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+
+         z-index: 15;
+      }
+
+      .direction-l .desc,
+      .direction-r .desc {
+         position: relative;
+         margin: 1em 1em 0 1em;
+         padding: 1em;
+
+         z-index: 15;
+      }
+
+
+   }
+
+   @media screen and (min-width: 400px and max-width: 660px) {
+
+      .direction-l .desc,
+      .direction-r .desc {
+         margin: 1em 4em 0 4em;
+      }
+
+   }
+
+   .eventTimeline {
+      font-size: 25px;
+      text-align: center;
+      font-weight: bolder;
+
+   }
+
+</style>
+
+
+<!-- body -->
+
+<body class="main-layout">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="head_top">
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
-                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                           data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                           aria-label="Toggle navigation">
                            <span class="navbar-toggler-icon"></span>
-                           </button>
-                           <div class="collapse navbar-collapse" id="navbarsExample04">
-                              <ul class="navbar-nav mr-auto">
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> Home  </a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </nav>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!-- end header inner -->
-            <!-- end header -->
-            <!-- banner -->
-            <section class="banner_main">
-               <div class="container-fluid">
-                  <div class="row d_flex">
-                     <div class="col-md-6">
-                        <div class="text-bg">
-                           <h1>Digital Marketing Landing Page 2019</h1>
-                           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                           <a href="#">Read More</a>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#"> Home </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#about">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#contact">Contact</a>
+                              </li>
+                           </ul>
                         </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="text-img">
-                           <figure><img src="images/box_img.png" alt="#"/></figure>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </div>
-      </header>
-      <!-- end banner -->
-      <!-- business -->
-      <div class="business">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <span>Increase your client for</span>
-                     <h2>Better position of Business</h2>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page </p>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="business_box ">
-                           <figure><img src="images/business_img.jpg" alt="#"/></figure>
-                           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                           <a class="read_more" href="#">Read more</a>
-                        </div>
-                     </div>
+                     </nav>
                   </div>
                </div>
             </div>
          </div>
+         <!-- end header inner -->
+         <!-- end header -->
+         <!-- banner -->
+         <section class="banner_main">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class="col-md-6">
+                     <div class="text-bg">
+                        <h1>Student's Convention 2022-2023</h1>
+                        <p><strong>REVIVING INDIA THROUGH SUSTAINABLE DEVELOPMENT</strong></p>
+                        <a href="#">Read More</a>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="text-img">
+                        <figure><img src="images/box_img.png" alt="#" /></figure>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
       </div>
-      <!-- end business -->
-      <!-- Projects -->
-      <div class="projects">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <span>Previous Projects</span>
-                     <h2>Better position of Business</h2>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page </p>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="row">
-                     <div class="col-md-6 offset-md-3">
-                        <div class="projects_box ">
-                           <figure><img src="images/projects_img.png" alt="#"/></figure>
-                        </div>
-                     </div>
-                     <div class="col-md-12">
-                        <div class="projects_box ">
-                           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-                           <a class="read_more" href="#">Read more</a>
-                        </div>
-                     </div>
-                  </div>
+   </header>
+   <!-- end banner -->
+   <!-- business -->
+   <div class="business">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <span>student's Convention</span>
+                  <h2>Organized By ISTE NIT Hamirpur</h2>
+                  <p> </p>
                </div>
             </div>
          </div>
-      </div>
-      <!-- end projects -->
-      <!-- Testimonial -->
-      <div class="section">
-         <div class="container">
-            <div id="" class="Testimonial">
+         <div class="row">
+            <div class="col-md-10 offset-md-1">
                <div class="row">
                   <div class="col-md-12">
-                     <div class="titlepage">
-                        <h2>Testimonial</h2>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-3">
-                     <div class="Testimonial_box">
-                        <i><img src="images/plan1.png" alt="#"/></i>
-                     </div>
-                  </div>
-                  <div class="col-md-9">
-                     <div class="Testimonial_box">
-                        <h4>Donals</h4>
-                        <p>Tof Lorem Ipsum, you need to be There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a pass <br>
-                           age of Lorem Ipsum, you need to be 
-                        </p>
+                     <div class="business_box ">
+                        <figure><img src="images/business_img.jpg" alt="#" /></figure>
+                        <p></p>
+                        <a class="read_more" href="#">Download Brochure</a>
                      </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
-     
-      <!-- end Testimonial -->
-      <!-- contact -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Contact us</h2>
-                     <span>There are many variations of passages of Lorem Ipsum available, but the </span>
+   </div>
+   <!-- end business -->
+   <!-- Projects -->
+   <div class="projects">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12" id="about">
+               <div class="titlepage">
+                  <span>OUR AIM</span>
+                  <h2>REVIVING INDIA THROUGH SUSTAINABLE DEVELOPMENT</h2>
+                  <!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                  </p> -->
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-10 offset-md-1">
+               <div class="row">
+                  <div class="col-md-6 offset-md-3">
+                     <div class="projects_box ">
+                        <figure><img src="images/projects_img.png" alt="#" /></figure>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="projects_box ">
+                        <p>The automated world saw a substantial transformation in this
+                           epidemic. The National Institute of Technology, Hamirpur, and the
+                           Indian Society for Technical Education is privileged to host the
+                           students' convention, which will allow young minds to share their
+                           thoughts on how modern engineering, with the aid of sustainable
+                           technology, can help in revolutionising the current challenges and help
+                           in the overall advancement of the nation.
+                           It aims to bring together students with varied interests to propound
+                           their ideas to actualize individual’s aspirations. With a profusion of
+                           events and guest lectures, a collaboration is anticipated to unravel the
+                           mystery behind technological minds</p>
+                        <!-- <a class="read_more" href="#">Read more</a> -->
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+      </div>
+   </div>
+
+   <!-- timeline -->
+   <h2 class="eventTimeline">Event Timeline</h2>
+   <ul class="timeline">
+
+      <!-- Item 1 -->
+      <li>
+         <div class="direction-r">
+            <div class="flag-wrapper">
+               <span class="flag">Interactive Events</span>
+               <span class="time-wrapper"><span class="time">11th April</span></span>
+            </div>
+            <!-- <div class="desc">My current employment. Way better than the position before!</div> -->
+         </div>
+      </li>
+
+      <!-- Item 2 -->
+      <li>
+         <div class="direction-l">
+            <div class="flag-wrapper">
+               <span class="flag">Guest Lectures</span>
+               <span class="time-wrapper"><span class="time">11th - 14th April</span></span>
+            </div>
+            <!-- <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div> -->
+         </div>
+      </li>
+
+      <!-- Item 3 -->
+      <li>
+         <div class="direction-r">
+            <div class="flag-wrapper">
+               <span class="flag">Ideathon: Kalpana</span>
+               <span class="time-wrapper"><span class="time">14th April</span></span>
+            </div>
+            <!-- <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div> -->
+         </div>
+      </li>
+      <li>
+         <div class="direction-l">
+            <div class="flag-wrapper">
+               <span class="flag">Poster Presentation</span>
+               <span class="time-wrapper"><span class="time">15th April</span></span>
+            </div>
+            <!-- <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div> -->
+         </div>
+      </li>
+   </ul>
+
+   <!-- timeline ends -->
+
+   <!-- end projects -->
+   <!-- Testimonial -->
+   <div class="section">
+      <div class="container">
+         <div id="" class="Testimonial">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>ABOUT ISTE</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="Testimonial_box">
+                  <h4>We are a Society, We are a Family, We are an Organization</h4>
+                  <p>The Indian Society for Technical Education is a non-profit organisation that was created in 1968
+                     at IIT Delhi with the goal of building links between students and instructors from different
+                     universities and evaluating their talents and abilities.
+                     It is a student-led national executive council with over 5 lakh members from over 2345 technical
+                     education institutes, including NITs, IITs, and other noteworthy institutions.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- end Testimonial -->
+   <!-- contact -->
+   <div id="contact" class="contact">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-11">
+               <div class="titlepage">
+                  <h2>Contact us</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container" id="contact">
+         <div class="row">
+            <div class="col-md-12 ">
+               <form class="main_form ">
+                  <div class="row">
+                     <div class="col-md-12 ">
+                        <input class="form_contril" placeholder="Name " type="text" name="Name ">
+                     </div>
+                     <div class="col-md-12">
+                        <input class="form_contril" placeholder="Phone Number" type="text" name=" Phone Number">
+                     </div>
+                     <div class="col-md-12">
+                        <input class="form_contril" placeholder="Email" type="text" name="Email">
+                     </div>
+                     <div class="col-md-12">
+                        <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                     </div>
+                     <div class="col-sm-12">
+                        <button class="send_btn"><a href="mailto:20bcs102@nith.ac.in"
+                              style="color: white;">Send</a></button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end contact -->
+   <!--  footer -->
+   <footer>
+      <div class="footer">
          <div class="container">
             <div class="row">
                <div class="col-md-12 ">
-                  <form class="main_form ">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="form_contril" placeholder="Name " type="text" name="Name ">
-                        </div>
-                        <div class="col-md-12">
-                           <input class="form_contril" placeholder="Phone Number" type="text" name=" Phone Number">
-                        </div>
-                        <div class="col-md-12">
-                           <input class="form_contril" placeholder="Email" type="text" name="Email">
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
-                        </div>
-                        <div class="col-sm-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
+                  <div class="cont">
+                     <h3> <strong class="multi"> Follow Us!</strong><br>
+                        Let's get together
+                     </h3>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <ul class="social_icon">
+                     <li><a href="https://www.linkedin.com/company/iste-nith/?viewAsMember=true"><i
+                              class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
+                     <li><a href="https://www.instagram.com/teamistenith/"><i class="fa fa-instagram"
+                              aria-hidden="true"></i></a></li>
+                     <li><a href="https://twitter.com/IsteNith"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="copyright">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <p>Copyright &#169; 2022 All Right Reserved By <a href="https://www.istenith.com/"
+                           target="blank">ISTE-NITH</a></p>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- end contact -->
-      <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12 ">
-                     <div class="cont">
-                        <h3> <strong class="multi"> Free Multipurpose Responsive</strong><br>
-                           Landing Page 2019
-                        </h3>
-                     </div>
-                  </div>
-                  <div class="col-md-12">
-                     <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-   </body>
-</html>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+   <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
 
+</html>
