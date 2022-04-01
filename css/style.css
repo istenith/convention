@@ -313,13 +313,13 @@ button {
 
 .head_top {
      background: url(../images/banner.png);
-     background-size: 100% 100%;
+     background-size: 100vw 100%;
      background-repeat: no-repeat;
      background-position: center;
 }
 
 .header {
-     width: 100%;
+     width: 100vw;
      background: transparent;
      padding: 30px 30px;
 }
@@ -793,7 +793,7 @@ ul.social_icon li a:hover {
      content: "";
      position: absolute;
      bottom: 61px;
-     background: url(../images/bottom.png);
+     /* background: url(../images/bottom.png); */
      width: 290px;
      height: 292px;
      right: 0;

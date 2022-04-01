@@ -304,7 +304,17 @@
 
    }
 
-   @media screen and (min-width: 400px and max-width: 660px) {
+   div.register_div span{
+      display: none;
+      transform: scale(1.5);
+      transition: display 2s!important;
+   }
+
+   div.register_div:hover span{
+      display: block;
+   }
+
+   @media screen and (min-width: 400px) and (max-width: 660px) {
 
       .direction-l .desc,
       .direction-r .desc {
@@ -357,7 +367,7 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item">
-                                 <a class="nav-link" href="#"> Home </a>
+                                 <a class="nav-link" href="#home"> Home </a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#about">About</a>
@@ -365,6 +375,18 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="#contact">Contact</a>
                               </li>
+                              <li class="nav-item">
+                              </li>
+                              <li>
+                                 <div class="direction-r">
+                                    <div class="flag-wrapper register_div">
+                                       <a class="nav-link register_events" href="">Event</a>
+                                       <span class="time-wrapper"><span class="time register_now">Registerations will open Soon!!</span></span>
+                                    </div>
+                                    <!-- <div class="desc">My current employment. Way better than the position before!</div> -->
+                                 </div>
+                              </li>
+                        
                            </ul>
                         </div>
                      </nav>
@@ -375,14 +397,14 @@
          <!-- end header inner -->
          <!-- end header -->
          <!-- banner -->
-         <section class="banner_main">
+         <section class="banner_main" id="home">
             <div class="container-fluid">
                <div class="row d_flex">
                   <div class="col-md-6">
                      <div class="text-bg">
                         <h1>Student's Convention 2022-2023</h1>
                         <p><strong>REVIVING INDIA THROUGH SUSTAINABLE DEVELOPMENT</strong></p>
-                        <a href="#">Read More</a>
+                        <a class="read_more" href="brochure.pdf" target="_blank" download="true">Download Brochure</a>
                      </div>
                   </div>
                   <div class="col-md-6">
@@ -415,7 +437,6 @@
                      <div class="business_box ">
                         <figure><img src="images/business_img.jpg" alt="#" /></figure>
                         <p></p>
-                        <a class="read_more" href="#">Download Brochure</a>
                      </div>
                   </div>
                </div>
@@ -458,7 +479,6 @@
                            their ideas to actualize individual’s aspirations. With a profusion of
                            events and guest lectures, a collaboration is anticipated to unravel the
                            mystery behind technological minds</p>
-                        <!-- <a class="read_more" href="#">Read more</a> -->
                      </div>
                   </div>
                </div>
@@ -558,13 +578,16 @@
       <div class="container" id="contact">
          <div class="row">
             <div class="col-md-12 ">
-               <form class="main_form ">
+               <form class="main_form "
+                  method="post"
+                  action="https://script.google.com/a/macros/nith.ac.in/s/AKfycbw1U2PFiGDa5lEh0J55x2CynAgRLEu8E-dyhmfnEKEcuI7EssSYNp2jhyTtI_MFrUpuFg/exec"
+               >
                   <div class="row">
                      <div class="col-md-12 ">
-                        <input class="form_contril" placeholder="Name " type="text" name="Name ">
+                        <input class="form_contril" placeholder="Name" type="text" name="Name">
                      </div>
                      <div class="col-md-12">
-                        <input class="form_contril" placeholder="Phone Number" type="text" name=" Phone Number">
+                        <input class="form_contril" placeholder="Phone Number" type="text" name="Phone Number">
                      </div>
                      <div class="col-md-12">
                         <input class="form_contril" placeholder="Email" type="text" name="Email">
@@ -597,11 +620,11 @@
                </div>
                <div class="col-md-12">
                   <ul class="social_icon">
-                     <li><a href="https://www.linkedin.com/company/iste-nith/?viewAsMember=true"><i
+                     <li><a href="https://www.linkedin.com/company/iste-nith/?viewAsMember=true" target="_blank"><i
                               class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
-                     <li><a href="https://www.instagram.com/teamistenith/"><i class="fa fa-instagram"
+                     <li><a href="https://www.instagram.com/teamistenith/" target="_blank"><i class="fa fa-instagram"
                               aria-hidden="true"></i></a></li>
-                     <li><a href="https://twitter.com/IsteNith"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+                     <li><a href="https://twitter.com/IsteNith" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
                      </li>
                   </ul>
                </div>
