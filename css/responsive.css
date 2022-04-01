@@ -52,12 +52,27 @@
 }
 @media screen and (min-width: 766px) {    
     a.register_events{
-        background-color: #000;
+        background: linear-gradient(-45deg, #fff, #1085d3, #23a6d5, #fff);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
         padding: 20px!important;
         font-size: 20px!important;
         margin-left: 40px;
         transform:translate(0,-30%);
+        border-radius:10px;
     }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
 
     a.register_events:hover{
         color: white!important;
