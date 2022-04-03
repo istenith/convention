@@ -50,6 +50,9 @@
         padding: 30px 0 190px 0;
     }
 }
+a.register_events{
+    margin-left: 0px !important;
+}
 @media screen and (min-width: 766px) {    
     a.register_events{
         background: linear-gradient(-45deg, #fff, #1085d3, #23a6d5, #fff);
@@ -57,7 +60,7 @@
         animation: gradient 15s ease infinite;
         padding: 20px!important;
         font-size: 20px!important;
-        margin-left: 40px;
+        margin-left: 20px;
         transform:translate(0,-30%);
         border-radius:10px;
     }
@@ -101,12 +104,17 @@
     }
     .Testimonial {
         background: #0891f8;
+        
     }
     .Testimonial_box {
         padding: 20px;
+        
     }
     .Testimonial_box p {
         padding-right: 0px;
+        padding-left: 0%;
+        padding-top: 1.2rem;
+        
     }
     .Testimonial_box i::after {
         border: inherit;
@@ -247,4 +255,3 @@
         background-repeat: no-repeat;
     }
 }
-
