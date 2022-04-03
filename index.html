@@ -31,6 +31,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
    <link rel="icon" href="images/logo.png">
+  
    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -329,6 +330,135 @@
       font-weight: bolder;
 
    }
+   
+  .card-container-styling {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 40px 0;
+    align-items: center;
+  }
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      background: #000;
+      
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    }
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .face1 {
+          box-sizing: border-box;
+          padding: 20px;
+        }
+          
+
+         .card-styling {
+         background-color: #fffc00;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         }
+        .face2 {
+          transition: 0.5s;
+        }
+          h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 10em;
+            color: #fff;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+          }
+        
+
+    .card:hover .face.face2 {
+      height: 60px;
+    }
+      h2 {
+        font-size: 2em;
+      }
+    
+
+    .card:nth-child(1) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(2) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(3) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+      #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(4) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+   }
+
+   .register_now_btn {
+      background: #00FFFF;
+  background-image: -webkit-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -moz-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -ms-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -o-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: linear-gradient(to bottom, #00FFFF, #0000FF);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding: 18px 20px 18px 20px;
+  text-decoration: none;
+
+}
+
+.register_now_btn:hover {
+  background: #87CEEB;
+  background-image: -webkit-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -moz-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -ms-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -o-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: linear-gradient(to bottom, #87CEEB, #00FFFF);
+  text-decoration: none;
+}
 </style>
 
 
@@ -605,6 +735,73 @@
       </div>
    </div>
    <!-- end contact -->
+
+   <!-- Events -->
+
+   <div id="events">
+
+   </div>
+
+   <!-- End Events -->
+   <div class="card-container-styling">
+
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+   
+            <p class="card-styling">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+            <br><button class="register_now_btn">Register Now</button>
+         </div>
+         
+        </div>
+        <div class="face face2">
+          <h2>Event 1</h2>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <p class="card-styling">Python is an interpreted, high-level and general-purpose programming language.</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>Event 2</h2>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+
+            <p class="card-styling">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>Event 3</h2>
+        </div>
+      </div>
+    
+
+
+    <div class="card">
+      <div class="face face1">
+        <div class="content">
+          <span class="stars"></span>
+
+          <p class="card-styling">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+        </div>
+      </div>
+      <div class="face face2">
+        <h2>Event 4</h2>
+      </div>
+    </div>
+    </div>
+  </div>
+
    <!--  footer -->
    <footer>
       <div class="footer">
