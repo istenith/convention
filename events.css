@@ -47,6 +47,14 @@ div.register_now a{
   border-radius: 5px;
 }
 
+div.register_now h3{
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 20px;
+  color: #0891f8;
+}
+
 @media screen and (min-width:1300px) {
   div.after638{
     display: none;
