@@ -330,6 +330,135 @@
       font-weight: bolder;
 
    }
+   
+  .card-container-styling {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 40px 0;
+    align-items: center;
+  }
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 0 auto;
+      background: #000;
+      
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    }
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .face1 {
+          box-sizing: border-box;
+          padding: 20px;
+        }
+          
+
+         .card-styling {
+         background-color: #fffc00;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         }
+        .face2 {
+          transition: 0.5s;
+        }
+          h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 10em;
+            color: #fff;
+            transition: 0.5s;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+          }
+        
+
+    .card:hover .face.face2 {
+      height: 60px;
+    }
+      h2 {
+        font-size: 2em;
+      }
+    
+
+    .card:nth-child(1) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(2) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(3) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+      #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%      );
+      border-radius: 15px;
+    }
+
+    .card:nth-child(4) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #0000FF 0%,
+        #00FFFF 45%,
+        #87CEEB 100%
+      );
+      border-radius: 15px;
+   }
+
+   .register_now_btn {
+      background: #00FFFF;
+  background-image: -webkit-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -moz-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -ms-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: -o-linear-gradient(top, #00FFFF, #0000FF);
+  background-image: linear-gradient(to bottom, #00FFFF, #0000FF);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding: 18px 20px 18px 20px;
+  text-decoration: none;
+
+}
+
+.register_now_btn:hover {
+  background: #87CEEB;
+  background-image: -webkit-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -moz-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -ms-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: -o-linear-gradient(top, #87CEEB, #00FFFF);
+  background-image: linear-gradient(to bottom, #87CEEB, #00FFFF);
+  text-decoration: none;
+}
 </style>
 
 
@@ -365,7 +494,7 @@
                            <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
+                           <ul class="navbar-nav mr-auto"> 
                               <li class="nav-item">
                                  <a class="nav-link" href="#home"> Home </a>
                               </li>
@@ -374,19 +503,20 @@
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="#contact">Contact</a>
-                              </li>
+                              </li>    
                               <li class="nav-item">
+                                 <a class="nav-link register_events" href="#events">Events</a>
                               </li>
-                              <li>
+                              <!-- <li>
                                  <div class="direction-r">
                                     <div class="flag-wrapper register_div">
                                        <a class="nav-link register_events" href="#eventslist">Events</a>
                                        <span class="time-wrapper"><span class="time register_now">Registerations will
                                              open Soon!!</span></span>
                                     </div>
-                                    <!-- <div class="desc">My current employment. Way better than the position before!</div> -->
-                                 </div>
-                              </li>
+                                     <div class="desc">My current employment. Way better than the position before!</div> -->
+                                 <!-- </div>
+                              </li>  -->
 
                            </ul>
                         </div>
@@ -403,8 +533,8 @@
                <div class="row d_flex">
                   <div class="col-md-6">
                      <div class="text-bg">
-                        <h1>Student's Convention 2022-2023</h1>
-                        <p><strong>REVIVING INDIA THROUGH SUSTAINABLE DEVELOPMENT</strong></p>
+                        <h1>STUDENTS Convention 2022-2023</h1>
+                        <p><strong>REINVENTING INDIA THROUGH SUSTAINABLE DEVELOPMENT</strong></p>
                         <a class="read_more" href="brochure.pdf" target="_blank" download="true">Download Brochure</a>
                      </div>
                   </div>
@@ -425,7 +555,7 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <span>student's Convention</span>
+                  <span>STUDENTS Convention</span>
                   <h2>Organized By ISTE NIT Hamirpur</h2>
                   <p> </p>
                </div>
@@ -453,7 +583,7 @@
             <div class="col-md-12" id="about">
                <div class="titlepage">
                   <span>OUR AIM</span>
-                  <h2>REVIVING INDIA THROUGH SUSTAINABLE DEVELOPMENT</h2>
+                  <h2>REINVENTING INDIA THROUGH SUSTAINABLE DEVELOPMENT</h2>
                   <!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page
                   </p> -->
                </div>
@@ -594,8 +724,11 @@
             <div class="card_title title-white" style="padding-bottom: 20px;">
               <h1 style="color: red ;
               padding-bottom: 60px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: rgb(13, 13, 67); padding-bottom: 50px; margin-top: -450px;">Ideathon: Kalpana </a></li> </h1>
-              <p style="color: #024879; padding-bottom: 70px;">TEAM EVENT THAT COMPEL  YOUNG MINDS TO THINK SUSTAINABLE DEVELOPMENT CONCEPTS THAT WOULD AID IN PROMOTION OF MAKE IN INDIA .
-            </p>
+
+              <p style="color: #024879;">A technology-based event aimed at encouraging young technocrats to come up 
+               with sustainable development concepts that would aid in the promotion of Make 
+               in India. Teams will be asked to provide a presentation and screenshots of their 
+               concepts, and their contributions will be auditable independently</p>
                <h1 style="color: red ;
                padding-bottom: 100px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: red!important;">Register Here </a></li> </h1>   </div>
           </div>
@@ -608,9 +741,10 @@
             <div class="card_title title-white">
                <h1 style="color: red ;
                padding-bottom: 60px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: rgb(13, 13, 67); padding-top: 30px; ">Interactive Event </a></li> </h1>
-               <p style="color: #024879; padding-bottom: 90px;">STRING OF EVENTS AIMING  TO COMBINE VARIOUS FIELDS OF INTEREST AND LEARNING SIMULTANEOUSLY .
 
-               </p>
+               <p style="color: #024879; padding-bottom: 70px;">A series of events with the common goal of engaging and attracting individuals 
+                  from various fields of interest.A plethora of events are planned to carry out 
+                  learning and enjoyment go hand in hand.</p>
                   <h1 style="color: red ;
                   padding-bottom: 100px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: red!important;">Register Here </a></li> </h1>
             </div>
@@ -625,9 +759,11 @@
             <div class="card_title title-white">
                <h1 style="color: red ;
                padding-bottom: 60px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: rgb(13, 13, 67);">Poster Presentation </a></li> </h1>
-               <p style="color: #024879; padding-bottom: 70px; ">PARTICIPANTS HAVE TO RESEARCH ON THE ASSIGNED TOPIC AND CONVEY THAT THROUGH THE HELP OF POSTER PRIOR TO ANSWERING QUESTIONS THROUGH THE AUDIENCE 
-
-                  .</p>
+               <p style="color: #024879;">A research-based event in which participants will be assigned different 
+                  sub-themes, and required to present them on a poster prior to answering 
+                  questions from the audience. There would be an oral presentation, and 
+                  participants might use a variety of additional creative approaches to construct 
+                  and communicate their study on a poster.</p>
                   <h1 style="color: red ;
                   padding-bottom: 100px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: red!important;">Register Here </a></li> </h1>
             </div>
@@ -640,9 +776,10 @@
             <div class="card_title title-white">
                <h1 style="color: red ;
                padding-bottom: 60px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: rgb(13, 13, 67);">Guest Lectures </a></li> </h1>
-               <p style="color: #024879;">CONNOISSEUR  PROVIDE A BETTER OPPORTUNITY TO LEARN ABOUT AN EXPLICIT TOPIC IN A WAY THAT GETS THEM INVOLVED IN THE CLASS AND ACTIVITY JOIN IN A MORE CONVENIENT WAY OF TEACHING THAT TENDS TO INCREASE THE PASSION FOR TECHNOLOGY
-
-                  .
+               <p style="color: #024879;">Proficient scholars will be invited to share their knowledge and skills on subjects
+                  of national significance which would revolve around technology, sustainability,
+                  and education. Their discourse will elicit a new surge of passion and zeal for a
+                  variety of topics that will simultaneously affect technology and the environment.
                   </p>
                <h1 style="color: red ;
                 padding-bottom: 100px;"> <li><a href="https://www.instagram.com/teamistenith/" target="_blank" style="color: red!important;">Register Here </a></li> </h1>
@@ -695,6 +832,73 @@
       </div>
    </div>
    <!-- end contact -->
+
+   <!-- Events -->
+
+   <div id="events">
+
+   </div>
+
+   <!-- End Events -->
+   <div class="card-container-styling">
+
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+   
+            <p class="card-styling">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+            <br><button class="register_now_btn">Register Now</button>
+         </div>
+         
+        </div>
+        <div class="face face2">
+          <h2>Event 1</h2>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+            <p class="card-styling">Python is an interpreted, high-level and general-purpose programming language.</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>Event 2</h2>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <span class="stars"></span>
+
+            <p class="card-styling">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+          </div>
+        </div>
+        <div class="face face2">
+          <h2>Event 3</h2>
+        </div>
+      </div>
+    
+
+
+    <div class="card">
+      <div class="face face1">
+        <div class="content">
+          <span class="stars"></span>
+
+          <p class="card-styling">C# is a general-purpose, multi-paradigm programming language encompassing static typing, strong typing, lexically scoped and component-oriented programming disciplines.</p>
+        </div>
+      </div>
+      <div class="face face2">
+        <h2>Event 4</h2>
+      </div>
+    </div>
+    </div>
+  </div>
+
    <!--  footer -->
    <footer>
       <div class="footer">
@@ -711,11 +915,14 @@
                   <ul class="social_icon">
                      <li><a href="https://www.linkedin.com/company/iste-nith/?viewAsMember=true" target="_blank"><i
                               class="fa fa-linkedin" aria-hidden="true"></i></i></a></li>
+                     <li><a href="https://www.facebook.com/teamistenith" target="_blank"><i
+                        class="fa fa-facebook" aria-hidden="true"></i></i></a></li>
                      <li><a href="https://www.instagram.com/teamistenith/" target="_blank"><i class="fa fa-instagram"
                               aria-hidden="true"></i></a></li>
                      <li><a href="https://twitter.com/IsteNith" target="_blank"><i class="fa fa-twitter"
                               aria-hidden="true"></i></i></a>
                      </li>
+                     <li><a href="https://www.facebook.com/teamistenith/"><i class="fa fa-facebook"aria-hidden="true"></i></a></li>
                   </ul>
                </div>
             </div>
