@@ -1,6 +1,13 @@
 /* *{
     background-color: rgb(75, 110, 126);
 } */
+
+/* @media screen and (max-width:) {
+  
+} */
+html{
+  /* width: 120vw!important; */
+}
 .cards-list {
     z-index: 0;
     width: 100%;
@@ -12,7 +19,12 @@
 
 
 /*  */
+a.coming_soon_a{
+  background-color: transparent!important;
+  color: #0891f8!important;
+  width: 100%!important;
 
+}
 
 .cards {
   display: grid;
