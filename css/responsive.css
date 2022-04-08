@@ -193,6 +193,12 @@ a.register_events {
   .projects::after {
     background: transparent;
   }
+  .mobile_view_centre {
+    text-align: center;
+  }
+  .mobile_view_contentc {
+  }
+
   .Testimonial {
     background: #0891f8;
   }
