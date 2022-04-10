@@ -331,7 +331,8 @@ button {
   max-width: 570px;
   width: 100%;
   float: right;
-  padding-right: 141px;
+  padding-right: 99px;
+  padding-left: 20px;
 }
 
 .text-bg h1 {
