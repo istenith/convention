@@ -34,8 +34,13 @@
 
 html {
   scroll-behavior: smooth;
+  
 }
 
+html,body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 body {
   color: #666666;
   font-size: 14px;
