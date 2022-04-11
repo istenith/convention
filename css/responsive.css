@@ -103,13 +103,9 @@ a.register_events {
     background: #0891f8;
   }
   .Testimonial_box {
-    padding: 20px;
+    padding: 2px;
   }
-  .Testimonial_box p {
-    padding-right: 0px;
-    padding-left: 0%;
-    padding-top: 1.2rem;
-  }
+ 
   .Testimonial_box i::after {
     border: inherit;
   }
@@ -179,6 +175,11 @@ a.register_events {
   .text-img {
     padding-top: 30px;
   }
+
+  .titlepage{
+    text-align: center;
+    padding-bottom: 10px;
+  }
   .titlepage h2 {
     font-size: 35px;
     line-height: 50px;
@@ -196,18 +197,24 @@ a.register_events {
   .mobile_view_centre {
     text-align: center;
   }
-  .mobile_view_contentc {
-  }
+  /* .mobile_view_contentc { */
+  /* } */
 
+  .Testimonial{
+    padding: 27px 0px;;
+  }
   .Testimonial {
     background: #0891f8;
   }
   .Testimonial_box {
-    padding: 20px;
+    padding: 10px;
   }
   .Testimonial_box p {
     /* padding-right: 0px; */
-    padding-left: -70px !important;
+    /* padding-left: -70px !important; */
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 1.2rem;
   }
   .Testimonial_box i::after {
     border: inherit;
