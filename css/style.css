@@ -34,10 +34,10 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
 
-html,body{
+html,
+body {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -781,8 +781,8 @@ ul.social_icon li a:hover {
   position: absolute;
   bottom: 61px;
   /* background: url(../images/bottom.png); */
-  width: 290px;
-  height: 292px;
+  /* width: 290px;
+  height: 292px; */
   right: 0;
 }
 

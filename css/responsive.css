@@ -105,7 +105,7 @@ a.register_events {
   .Testimonial_box {
     padding: 2px;
   }
- 
+
   .Testimonial_box i::after {
     border: inherit;
   }
@@ -171,12 +171,13 @@ a.register_events {
   }
   .text-bg {
     padding-right: 0;
+    padding-left: 0;
   }
   .text-img {
     padding-top: 30px;
   }
 
-  .titlepage{
+  .titlepage {
     text-align: center;
     padding-bottom: 10px;
   }
@@ -200,8 +201,8 @@ a.register_events {
   /* .mobile_view_contentc { */
   /* } */
 
-  .Testimonial{
-    padding: 27px 0px;;
+  .Testimonial {
+    padding: 27px 0px;
   }
   .Testimonial {
     background: #0891f8;
